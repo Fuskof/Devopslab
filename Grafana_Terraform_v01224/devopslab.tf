@@ -15,7 +15,7 @@ resource "grafana_dashboard" "metrics" {
 resource "grafana_data_source" "influxdb" {
   type          = "influxdb"
   name          = "InfluxDB"
-  url           = "https://influx.itech.md/"
+  url           = var.influx_db_url
   username      = "admin"
   password      = var.influx_db_pass
   access_mode   = "direct"
@@ -27,7 +27,7 @@ resource "grafana_alert_notification" "slack" {
   type = "slack"
 
   settings = {
-    slack = var.slack_ch_url
+    slack       = var.slack_ch_url
     uploadImage = "false"
   }
 }
