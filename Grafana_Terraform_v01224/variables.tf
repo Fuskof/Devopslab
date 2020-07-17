@@ -18,5 +18,3 @@ variable "slack_ch_url" {}
 
 # #Itech organisations users
 # variable "org_user1" {}
-
-#TEST
