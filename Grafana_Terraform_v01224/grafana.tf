@@ -1,8 +1,3 @@
-provider "grafana" {
-  url  = var.graf_provider_url
-  auth = var.graf_provider_auth
-}
-
 resource "grafana_folder" "collection" {
   title = var.graf_folder_title
 }
