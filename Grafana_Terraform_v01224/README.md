@@ -10,12 +10,16 @@ Grafana Servers version used:
 
 -------------------------------------------------
 Terraform template used in this repo:
+	
+	[ provider.tf ]
 
-	[ devopslab.tf ]
+		- Contains syntax to work with grafana provider.
+
+
+	[ grafana.tf ]
 		
 		- Contains syntax to work with grafana provider.
 		- Each title have arguments
-			~ provider "grafana"				[ used to call grafana plugin ]
 			~ resource "grafana_folder"			[ used to create folders ]
 			~ resource "grafana_dashboard"		[ used to create a dashbord with help of a .json file ( template exported from grafana ) ]
 			~ resource "grafana_data_source"		[ used to create database config from where metrics will be retrieved ]
@@ -26,9 +30,9 @@ Terraform template used in this repo:
 		- Contains variables placeholders reprezented in devopslab.tf file.
 		- Variables used in this file:
 			~ graf_provider_url		/ grafana server address url
-			~ graf_provider_auth		/ grafana auth token
+			~ graf_provider_auth		/ grafana auth token"SLACK_WEBHOOK_URL"
 			~ graf_folder_title		/ title of where dashboard will be created
-			~ influx_db_url		/ influx database address
+			~ influx_db_url		/ influx database address"SLACK_WEBHOOK_URL"
 			~ influx_db_pass		/ influx database authentification password
 			~ slack_ch_url			/ slack webhook address url
 
@@ -39,7 +43,7 @@ Terraform template used in this repo:
 			~ graf_provider_url = "REPLACE_WITH_YUR_API_URL"
 			~ graf_provider_auth = "REPLACE_WITH_YUR_API_KEY"
 			~ graf_folder_title = "REPLACE_WITH_YUR_FOLDER_NAME"
-			~ influx_db_url = "REPLACE_WITH_YUR_API_URL"
+			~ influx_db_url = "REPLACE_WITH_YUR_DB_URL"
 			~ influx_db_pass = "KEEPASSX"
 			~ slack_ch_url = "SLACK_WEBHOOK_URL"
 ----------------------------------------------
