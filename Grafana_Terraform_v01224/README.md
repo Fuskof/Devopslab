@@ -35,6 +35,13 @@ Terraform template used in this repo:
 	[ terraform.tfvars ]
 		
 		- Contains supply data for variables placeholders in devopslab.tf file, working throw mentioned variable.tf file.
+		- Variables to be changed:
+			~ graf_provider_url = "REPLACE_WITH_YUR_API_URL"
+			~ graf_provider_auth = "REPLACE_WITH_YUR_API_KEY"
+			~ graf_folder_title = "REPLACE_WITH_YUR_FOLDER_NAME"
+			~ influx_db_url = "REPLACE_WITH_YUR_API_URL"
+			~ influx_db_pass = "KEEPASSX"
+			~ slack_ch_url = "SLACK_WEBHOOK_URL"
 ----------------------------------------------
 
 Creation of dashboard:
