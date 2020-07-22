@@ -56,11 +56,11 @@ resource "openstack_compute_floatingip_associate_v2" "OpenstackFI" {
 }
 
 resource "null_resource" "provision" {
-  depends_on = [ openstack_compute_floatingip_associate_v2.OpenstackFI ]
+  depends_on    = [ openstack_compute_floatingip_associate_v2.OpenstackFI ]
   connection {
-    user = "centos"
+    user        = "centos"
     private_key = file(var.ssh_path)
-    host = openstack_networking_floatingip_v2.OpenstackFI.address
+    host        = openstack_networking_floatingip_v2.OpenstackFI.address
   }
 
   provisioner "file" {
