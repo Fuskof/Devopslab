@@ -1,41 +1,41 @@
 ####################### PROVIDER AUTHENTICATION #########################
 
-#Provider user authentication
+#Openstack user authentication
 variable "openstack_user_auth" {}
 
-#Provider tenant authentication
+#Openstack tenant authentication
 variable "openstack_tenant_auth"{}
 
-#Provider password authentication
+#Openstack password authentication
 variable "openstack_user_pass" {}
 
-#Provider url address
+#Openstack url address
 variable "openstack_auth_url" {}
 
 ####################### NETWORKING #########################
 
-#Provider network name
+#Openstack network name
 variable "openstack_network_name" {}
 
-#Provider subnet name
+#Openstack subnet name
 variable "openstack_subnet_name" {}
 
-#Provider subnet cidr type
+#Openstack subnet cidr type
 variable "network_subnet_cidr" {}
 
-#Provider network router name
+#Openstack network router name
 variable "network_router_name" {}
 
-#External ip address used for this router
+#External ip address used for this router [ ip or id alowed ]
 variable "ext_network_id" {}
 
-#Provider security groupe name
+#Openstack security groupe name
 variable "secgroup_name" {}
 
-#Provider security groupe description
+#Openstack security groupe description
 variable "secgroup_descritpion" {}
 
-#Provider security groupe rules
+#Openstack security groupe rules
 variable "from_port_nr" {}
 variable "to_port_nr" {}
 variable "ip_protocol_name" {}
@@ -43,21 +43,18 @@ variable "secgroup_cidr_rout" {}
 
 ####################### SSH KEY PAIR #########################
 
-#Using existing key, generated from Openstak
+#This case is using existing key, generated from Openstak
 variable "keypair_name" {}
 
 ####################### INSTANCES ############################
 
-#Number of instances on creation
-#variable "instance_count" {}
-
-#Instance names on creation
+#Openstack Instance names on creation
 variable "instance_name" {}
 
-#What image is used to create instance
+#What image is used to create instance [ iso name or id alowed ]
 variable "instance_image" {}
 
-#Instance server parrameters
+#Openstack Instance server parrameters = 2 cpu x 2 ram x 10gb space [2x2x10]
 variable "instance_flavor" {}
 
 #Openstack avalialbility zone
@@ -70,6 +67,7 @@ variable "ssh_path" {}
 
 ####################### FLOATING IP ###########################
 
+#In this case this is the address used to access instance from external world - public or ...
 variable "floatingip_pool" {}
 
 variable "floatingip_description" {}

@@ -21,12 +21,12 @@ openstack_network_name = ""
 openstack_subnet_name = ""
 
 #Provider subnet cidr type
-network_subnet_cidr = "192.168.1.0/24"
+network_subnet_cidr = ""
 
-#Provider network router name
+#Provider network router namen = "Test floating ip for Test Instance"
 network_router_name = ""
 
-#External ip address used for this router
+#External ip address used for this router [ ip or id alowed ]
 ext_network_id = ""
 
 #Provider security groupe name
@@ -43,21 +43,18 @@ secgroup_cidr_rout = "0.0.0.0/0"
 
 ####################### SSH KEY PAIR #########################
 
-#Using existing key, generated from Openstak
+#This case is using existing key, generated from Openstak
 keypair_name = ""
 
 ####################### INSTANCES ############################
 
-#Number of instances on creation
-#instance_count = "1"
-
 #Instance names on creation
 instance_name = ""
 
-#What image is used to create instance
+#What image is used to create instance [ iso name or id alowed ]
 instance_image = ""
 
-#Instance server parrameters
+#Instance server parrameters = 2 cpu x 4 ram x 10gb space [2x4x10]
 instance_flavor = "2x4x10"
 
 #Openstack avalialbility zone
@@ -70,6 +67,7 @@ ssh_path = ""
 
 ####################### FLOATING IP ##########################
 
+#In this case this is the address used to access instance from external world - public or ...
 floatingip_pool = ""
 
 floatingip_description = ""
