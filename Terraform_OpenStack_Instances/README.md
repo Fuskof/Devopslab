@@ -3,17 +3,20 @@ Terraform documentation to automate creation in Openstack of a router/network/su
 Terrafrom version used: 
 		Terraform v0.12.24
 		* provider.null: version = "~> 2.1"
-        * provider.openstack: version = "~> 1.29"
+         * provider.openstack: version = "~> 1.29"
 
 NOTES:
 	*Official documentation - https://www.terraform.io/docs/providers/index.html
 
 -------------------------------------------------
+
 Plan overview:
+
     This terraform template creates:
     *Network *Subnet *Router *Instance, assign ipv4 address and floatingip address from created router and subnet.
     After instance is created the resource "provision" connects working directory to instance and as described in openstack.tf steps - it start to copy specific script file and execute it on the machine...
     To connect working directory to Instance, please provide existing ssh key from Openstack, create new one or copy existing one in a .pem file and place it in the working directory or provide the patch directory where it is placed, remember to change the .pem name or/and full directory to it in .tfvars file in specified place.
+
 ------------------------------------------------
 
 Openstack router/network/subnet/floatingip/instance creation:
