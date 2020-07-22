@@ -3,7 +3,7 @@ Terraform documentation to automate creation in Openstack of a router/network/su
 --------------------------------------------------
 
 Terrafrom and provider versions used: 
-Terraform v0.12.24
+- Terraform v0.12.24
 - provider.null: version 2.1
 - provider.openstack: version 1.29
 
