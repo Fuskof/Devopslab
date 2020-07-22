@@ -1,9 +1,11 @@
 Terraform documentation to automate creation in Openstack of a router/network/subnet/floatingip/instance.
 
+--------------------------------------------------
+
 Terrafrom version used: 
 		Terraform v0.12.24
-		- provider.null: version = v2.1
-        - provider.openstack: version = v1.29
+		- provider.null: version 2.1
+        - provider.openstack: version 1.29
 
 NOTES:
 	*Official documentation - https://www.terraform.io/docs/providers/index.html
@@ -42,7 +44,7 @@ Terraform template used in this repo:
 		
 		- Contains syntax to work with openstack provider.
 		- Each resource have arguments
-			~ resource "openstack_networking_network_v2"			[ used to create new network ]
+            ~ resource "openstack_networking_network_v2"			[ used to create new network ]
 			~ resource "openstack_networking_subnet_v2"		        [ used to create new subnet ]
 			~ resource "openstack_networking_router_v2"	        	[ used to create new router ]
 			~ resource "openstack_networking_router_interface_v2" 	[ used to create router interface ]
@@ -51,8 +53,8 @@ Terraform template used in this repo:
             ~ resource "openstack_networking_floatingip_v2"	        [ used to create new network floating ip to externalize instances ]
             ~ resource "openstack_compute_floatingip_associate_v2"	[ used to associate floating ip to a instance ]
             ~ resource "null_resource" "provision"                  [ used to connect to an instance and execute commands/scripts... ]
-                        ~ provisioner "file"
-                        ~ provisioner "remote-exec" 
+                        * provisioner "file"
+                        * provisioner "remote-exec" 
 
 
 	[ variables.tf ]
