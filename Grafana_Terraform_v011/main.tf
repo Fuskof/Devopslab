@@ -15,11 +15,11 @@ resource "grafana_dashboard" "metrics" {
 resource "grafana_data_source" "influxdb" {
   type          = "influxdb"
   name          = "InfluxDB"
-  url           = "https://influx.itech.md/"
-  username      = "admin"
+  url           = "https://add-your-url"
+  username      = "youruser"
   password      = "${var.influx_db_pass}"
   access_mode   = "direct"
-  database_name = "telegraf"
+  database_name = "your-dbname"
 }
 
 resource "grafana_organization" "test-org" {
@@ -36,8 +36,8 @@ resource "grafana_alert_notification" "slack" {
   type = "slack"
 
   settings {
-    "slack" = "https://hooks.slack.com/services/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"
-    "recipient" = "@Igor"
+    "slack" = "https://hooks.slack.com/services/addyourhash"
+    "recipient" = @yourusername"
     "uploadImage" = "false"
   }
 }
