@@ -15,9 +15,3 @@ variable "influx_db_pass" {}
 
 #Slack notification webhook
 variable "slack_ch_url" {}
-
-# #Itech organisations name
-# variable "org_name" {}
-
-# #Itech organisations users
-# variable "org_user1" {}
