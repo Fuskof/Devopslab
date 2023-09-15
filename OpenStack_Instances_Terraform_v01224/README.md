@@ -212,3 +212,5 @@ Terraform template used in this repo:
             floatingip_pool                 = "REPLACE_WITH_YUR_OPENSTACK_FLOATINGIP_POOL"
 
             floatingip_description          = "REPLACE_WITH_YUR_OPENSTACK_FLOATINGIP_DESCRIPTION"
+
+------------------------------------------------
